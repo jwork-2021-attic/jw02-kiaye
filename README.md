@@ -1,44 +1,50 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5711403&assignment_repo_type=AssignmentRepo)
 # W02
 
-请先编译示例代码并运行`Scene.main()`，运行以下命令获得运行结果的可视化：
+191220168 张杨阳
 
-```bash
-java -jar asciianimator.jar -f result.txt -l false -c true -fps 3
-```
+任务一：
 
-请完成以下三项任务。
+类图：
 
-## 任务一
-本次作业的`example`提供了一份示例代码，实现了“老爷爷指挥七个葫芦娃按排行顺序站成一队”的场景。请仔细阅读代码并在自己的目录中撰写`Readme.md`，要求：
+![](http://www.plantuml.com/plantuml/png/bL8zKYin3Evz2fVllSnUu5KXJHgA304QXiBP5Oi7hxtZ7o1aKj9HS0_EbNiWHrPsmsIOIILPihyVMTCGbO-fCqBR2Fv1rI2N3hEDc3mxtKZZLFFdRpa4vsC-BAFNjfKjn8LH5YjR8MgZGf2pj5ePME8zy59tlO4ER0oCMI7BtRrKeYeGFRu_Pgg8wKNrPz3E0Txs-1lq4tMzBHKP7u4oCVdPGfXhxcRU8Ilompwm1eXK7Wansi8DocGtwAnNFW2fAqxWjKuHIEmmuqjj5GvARWRuXGiwQcSp0UUoFQuZG2xTAfC8akmZ6Y1I3fcNNsGz9Gs5fqynup0zOetyH4V9w0P2H7VXlLgFnyq4E716CXJ5M2qxepia66pgvDmbtupNezoW1P6UGajXDHWws1dz9c6XaNqoMryf-qI3yfYTT7VUp0_x-Ej7bAMggd-qw_zt7--xpoz1ydAPdtE7pxd90-0U7k7a8p45swJEV0C0)
 
-1. 用plantuml画出example的类图与Scene中main方法执行过程中的对象时序图；
-2. 尝试从面向对象编程角度理解`example`的设计理念，具体阐述这样写的好处与可改进之处（越详细越好）；
+时序图：
 
-## 任务二
+![](http://www.plantuml.com/plantuml/png/PP7DIiD058NtynG3NVi2MKXnuzwTosW7AQI995EahiHM3QK_MAsLQf4kAiMV4X6qJPlsOPmxcQvy1MSwnWQ4a8HyzvnpJoRhKTEbnOA5QRv0hBnD43BtgUDYDYwpyPEuV1RLHnYMiUdXFQVauSmkiIpdw7SAn_wdl1Gz8EIOk3YpPHK98ZRDqn9UtZwmMLrHPOqpsouXTW9vemLXKq7FSQcIxf1S0iMe3tvBmKFBj15QPMzihdOmsBp7N_fm4SQDO8rKX86NtIQ_3rbKZwEHMDp1sK0k0Nu78RsWcjHlHcAWXAdFkXBCE-07Mlizgy7a0wOX32BU3k9fvUlaD6Me2oHA5YtYww5knsyc_BsDa1xu5yAcZVGS6x_gMDrPtV-AIKlDucv50TuRo7gYNzC6wsdrD20urtzGpAzaJIc3joPCP48LeIonS_B8Vm00)
 
-参考示例代码，设计自己的类型并完成“蛇精指挥256个小妖怪站成一队“的场景。要求：
+设计理念：把各个对象都具象出来，面向对象编程。
 
-1. 每个小妖怪具有一种独特的颜色；
-2. 初始状态下小妖怪随机站成一队；
-3. 实现至少两种排序算法，将小妖怪按其颜色值排序；
-4. 如示例代码一样将排序过程可视化；
-5. 在自己的`Readme.md`中画出相应类图，并添加可视化结果展示链接。
-
-
-## 任务三
-
-将上一任务中自己写的代码，改为“蛇精指挥256个小妖怪站成一个16x16方阵“的场景。要求：
-
-1. 对上一任务中代码的修改应尽量小；
-2. 每个小妖怪具有一种独特的颜色；
-3. 初始状态下小妖怪随机站成16x16方阵；
-4. 实现至少两种排序算法，将小妖怪按其颜色值排序；
-5. 如示例代码一样将排序过程可视化；
-6. 在自己的`Readme.md`中画出相应类图，并添加可视化结果展示链接。
+好处：将各个对象拟人化，虽然看起来像是增加了程序的步骤，但实际上更贴合面向对象实现，如果我写的话可能不会这样具体的写出来。采用枚举类型，采用接口，更加贴合实际。
 
 
 
-请在 https://asciinema.org 上注册账户并上传上述执行结果录屏。
+任务二：
 
-[![asciicast](https://asciinema.org/a/436507.svg)](https://asciinema.org/a/436507)
+类图：
+
+![](http://www.plantuml.com/plantuml/png/dLEzxjCm4D_z51w1AWiZB7_Am09IrG0BOd2J8xLmxCXs2YZgoCR0U_1SVG_EEL_YLXKI_-a-plbzd9s749MFOs-4jX7y5zM0h1rcazYSd6wbSQfzyZGNmVcOYZfwRJlPGTmPPQ_6px4w2z4O5OBSZeU3WHhRuANk1mCzs1YOeKBEJv-b4bK6713jchSYu6zgUBI8sgglW6GJMeswELD3nYFCYTZS313mVPub0Mj2Di8Sc0mYjGj1HbluW7BP5JeSb0z0AhCZ-DwC4KZcklctsYfSc9nM-9qBEcet--DSTjTz14YjZygCK3f7E42e518nVv84vJHaec6SLyhy7PGRZewIuWH2HFVAU_MZv6C2N3OZ6OgYbClMw0mf9e1tgEZcgUH3z5Yafz1HE50u9TylLt-BEx79W0jhSrIsW_sRRQc3zdRVx_zSm_9K_tatvFIrCsxqqw8G5zfJXbT2mtApUsLRrqyY_p3U2-hCP-ZPLjKp-gzUN7xzlFp-8tYPQS2AUCPr6lAAUOObtFs8PCsZZCsJ1x3js9k_)
+
+可视化结果：
+
+[![asciicast](https://asciinema.org/a/JqWzINflDdXrMQxcB573ysdOI.svg)](https://asciinema.org/a/JqWzINflDdXrMQxcB573ysdOI)
+
+
+
+任务三：
+
+类图：
+
+![](http://www.plantuml.com/plantuml/png/dLE_pjCm4D_z51w1AWiZB1yV0mj8LGCiYC5DZjJ2iIFRAKLHHpO6teFdwdjmplbIjwgG-artlhly_fpZXn2LZsDlXBOH_3VLWAmTPfDOxPrkfN6gVVOy7uBpCHtgwBNjP0TnRPIzQB_4qr68ngWGvEEutHgeiGnUwdumq8EDWHagvFpoLIfHPS01qIvvAmB-eOOdYwYj-Wv8Dg7Lg9iZ5MJSmPo8rLK30J_cNXAm9Db6c0EJGQHo8SXe2vzGBhj2XuFo0KXbTWI7Pen0Ci-RVw-jmeN9wGo_Ta57xMP_dClkieu0gVHPcH5AvmW729L2-NaIbDEGYOPnNYdp8rXXA3fAYWc4YEwDz-fdoVT1uTmXC-A8mO0CkOwJvTMMpFTJiHUyLnPjA8foCxp5F9CGM2kQl_ehyn3zbz9Jw2XiAUpJYb-BYZcMHOfL1bnOcvso7MpUFPOww8fk-RtlnfTNyT_VW9o-TSQDVbeKua9xol1kg5bkTgDiw_f9vBVflQ3AF4ClfAfUq1D-TVhzw_JdhyZ8SuCLSO_FgSahvXuUuUP796jkPMpkqB_4O0lI0zXsxCq_)
+
+可视化结果：
+
+[![asciicast](https://asciinema.org/a/Ga6cHoDe3pXZXqr8zha7V7pIo.svg)](https://asciinema.org/a/Ga6cHoDe3pXZXqr8zha7V7pIo)
+
+
+
+
+
+
+
+
+

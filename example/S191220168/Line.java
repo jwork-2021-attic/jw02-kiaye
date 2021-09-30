@@ -6,7 +6,7 @@ public class Line {
         this.positions = new Position[length];
     }
 
-    private Position[] positions;
+    public Position[] positions;
 
     public void put(Linable linable, int i) {
         if (this.positions[i] == null) {
@@ -25,7 +25,7 @@ public class Line {
 
     class Position {
 
-        private Linable linable;
+        public Linable linable;
 
         Position(Linable linable) {
             this.linable = linable;

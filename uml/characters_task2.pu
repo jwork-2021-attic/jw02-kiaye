@@ -1,0 +1,79 @@
+@startuml
+interface Soter{
++void load()
++void sort()
++String getPlan()
++void sort2()
+}
+
+class BubbleSorter implements Soter{
+-int[] a
+-String plan
++void load()
+-void swap()
++void sort()
++String getPlan()
++void sort2()
+}
+
+class Snake{
+-{static} Snake theSnake
++{static} Snake getTheSnake()
+-Snake()
+-Sorter sorter
++void setSorter()
++String lineUp()
+-String[] parsePlan()
+-void excute()
+}
+
+interface Linable {
++void setPosition()
++Position getPosition()
++int getValue()
+}
+
+class Line{
++Line()
+-Position[] positions
++void put()
++Linable get()
++String toString()
++Linable[] toArray()
+}
+
+class Position{
+-Linable linable
+Position()
++void setLinable()
+}
+class Monster implements Linable{
+-int r
+-int g
+-int b
+-int value;
+-Position position
++Monster()
++void changeRGB()
++void setValue()
++String toString()
++void setPosition()
++Position getPosition()
++void swapPosition()
++int getValue()
+}
+class Colour{
++Monster[] monsters
++Colour()
+}
+
+class Random{
+int[] arr
+Random()
+}
+Snake --* Soter:包含
+Monster --* Position:包含
+Position --* Linable:包含
+Line --* Position:包含
+Colour --* Monster:包含
+@enduml

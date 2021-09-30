@@ -30,6 +30,7 @@ public class Snake {
         }
 
         Linable[] linables = line.toArray();
+        
         int[] ranks = new int[linables.length];
 
         for (int i = 0; i < linables.length; i++) {
@@ -51,6 +52,40 @@ public class Snake {
         return log;
 
     }
+
+    //task3
+    public String matrixUp(Matrix matrix, Monster[] monsters) {
+
+        String log = new String();
+
+        if (sorter == null) {
+            return null;
+        }
+
+        Linable[] linables = matrix.toArray();
+        
+        int[] ranks = new int[linables.length];
+
+        for (int i = 0; i < linables.length; i++) {
+            ranks[i] = linables[i].getValue();
+        }
+
+        sorter.load(ranks);
+        sorter.sort2();
+
+        String[] sortSteps = this.parsePlan(sorter.getPlan());
+
+        for (String step : sortSteps) {
+            this.execute(step, monsters);
+            System.out.println(matrix.toString());
+            log += matrix.toString();
+            log += "\n[frame]\n";
+        }
+
+        return log;
+
+    }
+
 
     private String[] parsePlan(String plan) {
         return plan.split("\n");

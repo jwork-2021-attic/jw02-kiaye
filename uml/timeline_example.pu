@@ -1,0 +1,25 @@
+@startuml timeline
+
+actor 七个葫芦娃 as boys #Yellow
+actor  爷爷 as geezer #Blue
+entity 队伍 as line #Green
+entity 排序 as sorter #Red
+entity 计划 as plan
+
+boys -> boys:依次出现
+
+boys -> line: 随机位置进入队列
+
+geezer -> geezer:出现
+
+line -> geezer:爷爷得到队列，并建好数组。
+
+geezer -> sorter:爷爷使用排序方法
+
+sorter -> geezer:爷爷从排序方法中得到plan
+
+plan -> line:用得到的plan来进行排序
+
+plan -> plan:将计划输出到屏幕上
+
+@enduml

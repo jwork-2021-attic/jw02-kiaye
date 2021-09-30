@@ -1,0 +1,64 @@
+@startuml
+interface Soter{
++void load()
++void sort()
++String getPlan()
+}
+
+class BubbleSorter implements Soter{
+-int[] a
+-String plan
++void load()
+-void swap()
++void sort()
++String getPlan()
+}
+
+class Geezer{
+-{static} Geezer theGeezer
++{static} Geezer getTheGeezer()
+-Geezer()
+-Sorter sorter
++void setSorter()
++String lineUp()
+-String[] parsePlan()
+-void excute()
+}
+
+interface Linable {
++void setPosition()
++Position getPosition()
++int getValue()
+}
+class Line{
++Line()
+-Position[] positions
++void put()
++Linable get()
++String toString()
++Linable[] toArray()
+}
+
+class Position{
+-Linable linable
+Position()
++void setLinable()
+}
+enum Gourd implements Linable{
+-int r
+-int g
+-int b
+-Position position
++{static} Gourd getGourdByRank
++int rank()
++String toString()
++void setPosition()
++Position getPosition()
++void swapPosition()
++int getValue()
+}
+Geezer --* Soter:包含
+Gourd --* Position:包含
+Position --* Linable:包含
+Line --* Position:包含
+@enduml
